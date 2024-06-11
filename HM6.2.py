@@ -1,9 +1,9 @@
 while True:
-    x = int(input("Enter a number between 0 - 8640000: "))
+    x = int(input("Введіть номер між 0 - 8640000: "))
     if 0 <= x <= 8640000:
         break
     else:
-        print("Enter a valid number")
+        print("Введіть коректний номер")
 
 #converting
 days, other1 = divmod(x, 86400)
@@ -17,7 +17,22 @@ hours = str(hours).zfill(2)
 seconds = str(seconds).zfill(2)
 
 #day/days
-if days == 1:
-    print(f"Converted time: {days} day:{hours}:{minutes}:{seconds}")
+if days < 21:
+    if days == 1:
+        print(f"Конвертований час: {days} день:{hours}:{minutes}:{seconds}")
+    elif 1 < days < 5:
+        print(f"Конвертований час: {days} дні:{hours}:{minutes}:{seconds}")
+    else:
+        print(f"Конвертований час: {days} днів:{hours}:{minutes}:{seconds}")
 else:
-    print(f"Converted time: {days} days:{hours}:{minutes}:{seconds}")
+    days_str = str(days)
+    if days_str[-1] == "1":
+        print(f"Конвертований час: {days} день:{hours}:{minutes}:{seconds}")
+    elif days_str[-1] in "234":
+        print(f"Конвертований час: {days} дні:{hours}:{minutes}:{seconds}")
+    else:
+        print(f"Конвертований час: {days} днів:{hours}:{minutes}:{seconds}")
+
+
+
+# print(f"Converted time: {days} day:{hours}:{minutes}:{seconds}")
