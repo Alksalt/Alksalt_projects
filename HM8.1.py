@@ -1,0 +1,23 @@
+import re
+
+
+def add_one(some_list):
+    new_str = ""
+    for i in some_list:
+        new_str += str(i)
+    new_int = str(int(new_str) + 1)
+    new_lst = [int(i) for i in new_int]
+    return new_lst
+
+
+
+
+
+
+
+
+assert add_one([1, 2, 3, 4]) == [1, 2, 3, 5], 'Test1'
+assert add_one([9, 9, 9]) == [1, 0, 0, 0], 'Test2'
+assert add_one([0]) == [1], 'Test3'
+assert add_one([9]) == [1, 0], 'Test4'
+print("ОК")
