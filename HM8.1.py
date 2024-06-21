@@ -1,6 +1,3 @@
-import re
-
-
 def add_one(some_list):
     new_str = ""
     for i in some_list:
