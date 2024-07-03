@@ -9,6 +9,9 @@ def is_even(digit):
     last_str_digit = str(digit)[-1]
     return last_str_digit in "02468"
 
+###3 (but was given in the lesson)
+#def is_even(digit):
+#    return (digit & 1) == 0
 
 
 
