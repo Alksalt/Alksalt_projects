@@ -17,7 +17,7 @@ elif z == "division":
 else:
     print("Try to enter correct operator(plus, minus, multiplication,division)")
     print("Try again")
-
+print("some changes")
 
 
 
